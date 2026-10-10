@@ -6,12 +6,6 @@ import { initReactI18next } from "react-i18next";
 import enTranslation from "./en.json";
 import arTranslation from "./ar.json";
 
-/**
- * Initializes i18next for internationalization in a React Native application,
- * with automatic language detection based on the device's language settings.
- *
- * @returns {void}
- */
 
 i18n
   .use(initReactI18next)
