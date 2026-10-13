@@ -21,7 +21,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
         },
         heroSection: {
             marginTop: moderateScale(12),
-            marginBottom: moderateScale(28),
+            // marginBottom: moderateScale(28),
         },
         brandBadge: {
             alignSelf: 'flex-start',

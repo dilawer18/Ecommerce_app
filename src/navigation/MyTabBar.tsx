@@ -18,7 +18,6 @@ const MyTabBar = ({ state, descriptors, navigation }: any) => {
     const { theme } = useTheme();
     const styles = useRTLStyles(isRTL, theme);
     const colors = Colors[theme];
-    const cartItems = useSelector((state: RootState) => state.cart.items);
     return (
         <View style={styles.container}>
             {state?.routes.filter((route: any) => route.name !== 'ProductDetails').map((route: any, index: number) => {
@@ -69,14 +68,7 @@ const MyTabBar = ({ state, descriptors, navigation }: any) => {
                     >
                         <View style={styles.iconWrapper}>
                             {icon}
-                            {isCartTab && cartItems?.length > 0 && (
-                                <View style={styles.badge}>
-                                    <TextComp
-                                        text={String(cartItems?.length)}
-                                        style={styles.badgeText}
-                                    />
-                                </View>
-                            )}
+                          
                         </View>
                         <TextComp
                             text={label}
@@ -120,18 +112,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
         iconWrapper: {
             position: 'relative',
         },
-        badge: {
-            position: 'absolute',
-            right: -8,
-            top: -6,
-            minWidth: 18,
-            height: 18,
-            borderRadius: 9,
-            backgroundColor: commonColors.primary,
-            justifyContent: 'center',
-            alignItems: 'center',
-            paddingHorizontal: 5,
-        },
+      
         badgeText: {
             color: '#fff',
             fontSize: 10,
