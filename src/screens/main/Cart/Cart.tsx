@@ -92,17 +92,6 @@ const Cart = () => {
       <WrapperContainer style={styles.container} edges={['top']}>
         <HeaderComp showBack={false} title={t('CART')} />
 
-        <View style={styles.countsContainer}>
-          <TextComp
-            isDynamic
-            text={`${t('CART_ITEMS_COUNT', { count: cartItems.length })} | ${t(
-              'FAVOURITES_ITEMS_COUNT',
-              { count: favouriteItems.length },
-            )}`}
-            style={styles.countsText}
-          />
-        </View>
-
         {cartItems.length === 0 ? (
           renderEmptyState()
         ) : (
